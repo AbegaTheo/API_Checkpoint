@@ -1,0 +1,140 @@
+/* Styles pour le conteneur principal de l'application */
+.App {
+  text-align: center; /* Centre le texte horizontalement */
+  display: flex; /* Utilise Flexbox pour la mise en page */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  justify-content: center; /* Centre les éléments verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements internes */
+  box-sizing: border-box; /* Inclut les bordures et le padding dans la taille totale */
+}
+
+/* Styles pour le logo de l'application */
+.App-logo {
+  height: 40vmin; /* Définit une hauteur relative à la taille de la fenêtre */
+  pointer-events: none; /* Désactive les interactions avec le logo */
+}
+
+/* Animation pour le logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Fait tourner le logo en continu */
+  }
+}
+
+/* Animation de rotation pour le logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Départ à 0° */
+  }
+  to {
+    transform: rotate(360deg); /* Rotation complète à 360° */
+  }
+}
+
+/* Styles pour l'en-tête de l'application */
+.App-header {
+  background-color: #282c34; /* Couleur de fond sombre */
+  min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  display: flex; /* Utilise Flexbox pour la mise en page */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: center; /* Centre les éléments verticalement */
+  font-size: calc(10px + 2vmin); /* Taille de police relative à la taille de la fenêtre */
+  color: white; /* Couleur du texte blanche */
+}
+
+/* Styles pour les liens dans l'application */
+.App-link {
+  color: #61dafb; /* Couleur bleu clair */
+}
+
+/* Styles pour le corps de la page */
+body {
+  background-color: grey; /* Couleur de fond grise */
+  font-family: Arial, sans-serif; /* Police par défaut */
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les espacements internes */
+}
+
+/* Styles pour la liste des utilisateurs */
+.user-list {
+  display: grid; /* Utilise une grille pour organiser les éléments */
+  flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  margin-top: 20px; /* Ajoute un espace au-dessus de la liste */
+  grid-template-columns: repeat(3, 1fr); /* Définit 3 colonnes de largeur égale */
+  gap: 16px; /* Ajoute un espacement entre les éléments */
+  padding: 16px; /* Ajoute un espacement interne */
+  list-style-type: none; /* Supprime les puces de la liste */
+}
+
+/* Styles pour chaque élément de la liste des utilisateurs */
+.user-item {
+  border-radius: 8px; /* Arrondit les coins */
+  padding: 10px 70px; /* Ajoute un espacement interne */
+  text-align: center; /* Centre le texte */
+  margin: 10px; /* Ajoute un espacement externe */
+  border: 1px solid #000000; /* Ajoute une bordure noire */
+  color: #333; /* Couleur du texte gris foncé */
+  box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour l'effet au survol */
+  font-size: 20px; /* Taille de police */
+  background-color: beige; /* Couleur de fond beige */
+}
+
+/* Effet au survol pour chaque élément de la liste */
+.user-item:hover {
+  transform: scale(1.05); /* Agrandit légèrement l'élément */
+}
+
+/* Styles pour la pagination */
+.pagination {
+  display: flex; /* Utilise Flexbox pour aligner les boutons */
+  justify-content: center; /* Centre les boutons horizontalement */
+  margin-top: 20px; /* Ajoute un espace au-dessus de la pagination */
+  gap: 10px; /* Ajoute un espacement entre les boutons */
+  font-size: 16px; /* Taille de police */
+}
+
+/* Styles pour les boutons de pagination */
+.pagination button {
+  padding: 10px 15px; /* Ajoute un espacement interne */
+  margin: 0 5px; /* Ajoute un espacement externe horizontal */
+  font-size: 20px; /* Taille de police */
+  font-weight: bold; /* Texte en gras */
+  border: 1px solid white; /* Bordure blanche */
+  border-radius: 5px; /* Arrondit les coins */
+  background-color: blue; /* Couleur de fond bleue */
+  box-shadow: 2px 2px 2px 2px white; /* Ajoute une ombre blanche */
+  cursor: pointer; /* Change le curseur en pointeur */
+  color: white; /* Couleur du texte blanche */
+  transition: background-color 0.3s ease-in-out; /* Transition pour l'effet au survol */
+}
+
+/* Effet au survol pour les boutons de pagination */
+.pagination button:hover {
+  background-color: red; /* Change la couleur de fond au survol */
+  color: white; /* Change la couleur du texte au survol */
+  transition: background-color 0.3s ease-in-out; /* Transition pour l'effet au survol */
+  transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+  box-shadow: 2px 2px 2px 2px red; /* Ajoute une ombre rouge au survol */
+}
+
+/* Styles pour le nom des utilisateurs */
+.user-name {
+  font-size: 30px; /* Taille de police */
+  font-weight: bold; /* Texte en gras */
+  color: blue; /* Couleur bleue */
+}
+
+/* Styles pour le titre de la page */
+.title {
+  font-size: 40px; /* Taille de police */
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 50px; /* Ajoute un espace en dessous */
+  margin: 10px; /* Ajoute un espacement externe */
+}
